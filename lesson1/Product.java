@@ -2,11 +2,11 @@ package  OOP.OOP.lesson1;
 
 public class Product {
 
-    String name;
+    protected String name; //protected - поле защищено, но с ним можно работать
 
-    String brand;
+    protected String brand;
 
-    double price;
+    protected double price;
 
     double getPrice(){
         return price;
@@ -17,13 +17,18 @@ public class Product {
         // price = inputPrice;
     } //аксессор или сеттер
 
-    Product(){
+    public Product(){  //конструктор без параметров - дефолтный конструктор
+        this("product", 100); //this- указатель текущего экземпляра объекта
+    }
+    //public, private - модификаторы области видимости
+
+    public Product(String inputName, double inputPrice){
         brand = "noname";
         name = "product";
         price = 100;
     }
 
-    Product(String inputBrand, String inputName, double inputPrice){
+    public Product(String inputBrand, String inputName, double inputPrice){
         checkPrice(inputPrice);
         // if (inputPrice <= 0){
         //     price = 100;
@@ -59,7 +64,7 @@ public class Product {
     //          price = inputPrice;
     //  }  //если мы не создаем конструктор в классе, то он создается самостоятельно по умолчанию
 
-    String displayInfo(){
+    public String displayInfo(){
         return String.format("%s - %s - %f", brand, name, price);
     }
 }
