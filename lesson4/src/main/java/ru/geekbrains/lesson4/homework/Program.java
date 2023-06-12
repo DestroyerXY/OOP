@@ -21,7 +21,6 @@ public class Program {
      g. Не забываем про метод добавления фрукта в коробку.
      */
     public static void main(String[] args) {
-        
         Box box1 = new Box();
         //кладем в нее 3 яблока
         box1.add(new Apple());
@@ -81,3 +80,33 @@ public class Program {
         // все работает
     }
 }
+
+//АЛЬТЕРНАТИВНЫЙ КОД
+//public class Program 
+// public static void main(String[] args) {
+//     Box box1 = new Box();
+//     Box box2 = new Box();
+//     Apple apple1 = new Apple((float) 0.2);
+//     Apple apple2 = new Apple((float) 0.1);
+//     Orange orange1 = new Orange((float) 0.3);
+//     Orange orange2 = new Orange((float) 0.2);
+
+//     box1.add(apple1);
+//     box1.add(apple2);
+//     box1.add(orange1);
+
+//     box2.add(orange2);
+//     box2.add(apple2);
+//     box2.add(orange1);
+
+//     System.out.println("Вес коробки 1: " + box1.getWeight());
+//     System.out.println("Вес коробки 2: " + box2.getWeight());
+
+//     System.out.println("Коробки равны по весу: " + box1.compare(box2));
+
+//     box1.shiftSingleItem(box2);
+
+//     System.out.println("Вес коробки 1 после пересыпания: " + box1.getWeight());
+//     System.out.println("Вес коробки 2 после пересыпания: " + box2.getWeight());
+// }
+// }
